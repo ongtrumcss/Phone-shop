@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài khoản - PhoneShop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading"></div>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/3659/3659898.png" alt="PhoneShop Logo" height="30" class="me-2">
+                PhoneShop
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="cart.html" class="btn btn-outline-light me-2">
+                        <i class="fas fa-shopping-cart"></i> Giỏ hàng
+                    </a>
+                    <a href="account.html" class="btn btn-outline-light active">
+                        <i class="fas fa-user"></i> Tài khoản
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Account Section -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3">
+                <div class="card animate__animated animate__fadeInLeft">
+                    <div class="card-body text-center">
+                        <div class="position-relative mb-4">
+                            <img src="https://images.unsplash.com/photo-1633332755192-72705e0b8a50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                                 class="rounded-circle mb-3" 
+                                 style="width: 120px; height: 120px; object-fit: cover;" 
+                                 alt="User Avatar">
+                            <button class="btn btn-sm btn-primary position-absolute bottom-0 end-0 rounded-circle">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                        </div>
+                        <h5 class="card-title mb-1">Nguyễn Văn A</h5>
+                        <p class="text-muted mb-4">example@email.com</p>
+                        <div class="list-group">
+                            <a href="#profile" class="list-group-item list-group-item-action active" data-bs-toggle="list">
+                                <i class="fas fa-user me-2"></i>Thông tin cá nhân
+                            </a>
+                            <a href="#orders" class="list-group-item list-group-item-action" data-bs-toggle="list">
+                                <i class="fas fa-shopping-bag me-2"></i>Đơn hàng
+                            </a>
+                            <a href="#wishlist" class="list-group-item list-group-item-action" data-bs-toggle="list">
+                                <i class="fas fa-heart me-2"></i>Danh sách yêu thích
+                            </a>
+                            <a href="#addresses" class="list-group-item list-group-item-action" data-bs-toggle="list">
+                                <i class="fas fa-map-marker-alt me-2"></i>Sổ địa chỉ
+                            </a>
+                            <a href="#security" class="list-group-item list-group-item-action" data-bs-toggle="list">
+                                <i class="fas fa-shield-alt me-2"></i>Bảo mật
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <div class="tab-content animate__animated animate__fadeInRight">
+                    <!-- Profile Tab -->
+                    <div class="tab-pane fade show active" id="profile">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4">Thông tin cá nhân</h5>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Họ và tên</label>
+                                            <input type="text" class="form-control" value="Nguyễn Văn A">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Email</label>
+                                            <input type="email" class="form-control" value="example@email.com">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Số điện thoại</label>
+                                            <input type="tel" class="form-control" value="0123456789">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Ngày sinh</label>
+                                            <input type="date" class="form-control" value="1990-01-01">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Giới thiệu</label>
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Cập nhật thông tin</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Orders Tab -->
+                    <div class="tab-pane fade" id="orders">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4">Lịch sử đơn hàng</h5>
+                                <!-- Order 1 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <h6 class="mb-1">Đơn hàng #12345</h6>
+                                                <small class="text-muted">Đặt ngày: 01/03/2024</small>
+                                            </div>
+                                            <span class="badge bg-success">Đã giao hàng</span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                                                     class="img-fluid rounded" alt="iPhone 15 Pro Max">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6 class="mb-1">iPhone 15 Pro Max</h6>
+                                                <p class="text-muted mb-1">256GB - Titanium Black</p>
+                                                <p class="mb-0">Số lượng: 1</p>
+                                            </div>
+                                            <div class="col-md-2 text-center">
+                                                <p class="mb-0">32.990.000đ</p>
+                                            </div>
+                                            <div class="col-md-2 text-end">
+                                                <button class="btn btn-outline-primary btn-sm">Chi tiết</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Order 2 -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <h6 class="mb-1">Đơn hàng #12344</h6>
+                                                <small class="text-muted">Đặt ngày: 28/02/2024</small>
+                                            </div>
+                                            <span class="badge bg-warning">Đang xử lý</span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <img src="https://images.unsplash.com/photo-1706881155682-0c0b0b0b0b0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                                                     class="img-fluid rounded" alt="Samsung Galaxy S24 Ultra">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6 class="mb-1">Samsung Galaxy S24 Ultra</h6>
+                                                <p class="text-muted mb-1">512GB - Titanium Gray</p>
+                                                <p class="mb-0">Số lượng: 1</p>
+                                            </div>
+                                            <div class="col-md-2 text-center">
+                                                <p class="mb-0">29.990.000đ</p>
+                                            </div>
+                                            <div class="col-md-2 text-end">
+                                                <button class="btn btn-outline-primary btn-sm">Chi tiết</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wishlist Tab -->
+                    <div class="tab-pane fade" id="wishlist">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4">Danh sách yêu thích</h5>
+                                <div class="row">
+                                    <!-- Wishlist Item 1 -->
+                                    <div class="col-md-4 mb-4">
+                                        <div class="card h-100">
+                                            <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                                                 class="card-img-top" alt="iPhone 15 Pro Max">
+                                            <div class="card-body">
+                                                <h6 class="card-title">iPhone 15 Pro Max</h6>
+                                                <p class="card-text text-muted">256GB - Titanium Black</p>
+                                                <p class="card-text price-tag">32.990.000đ</p>
+                                                <div class="d-flex justify-content-between">
+                                                    <button class="btn btn-outline-primary btn-sm">Thêm vào giỏ</button>
+                                                    <button class="btn btn-outline-danger btn-sm">
+                                                        <i class="fas fa-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Wishlist Item 2 -->
+                                    <div class="col-md-4 mb-4">
+                                        <div class="card h-100">
+                                            <img src="https://images.unsplash.com/photo-1706881155682-0c0b0b0b0b0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                                                 class="card-img-top" alt="Samsung Galaxy S24 Ultra">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Samsung Galaxy S24 Ultra</h6>
+                                                <p class="card-text text-muted">512GB - Titanium Gray</p>
+                                                <p class="card-text price-tag">29.990.000đ</p>
+                                                <div class="d-flex justify-content-between">
+                                                    <button class="btn btn-outline-primary btn-sm">Thêm vào giỏ</button>
+                                                    <button class="btn btn-outline-danger btn-sm">
+                                                        <i class="fas fa-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Addresses Tab -->
+                    <div class="tab-pane fade" id="addresses">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h5 class="card-title mb-0">Sổ địa chỉ</h5>
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addAddressModal">
+                                        <i class="fas fa-plus me-2"></i>Thêm địa chỉ mới
+                                    </button>
+                                </div>
+                                <!-- Address 1 -->
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h6 class="mb-1">Nguyễn Văn A</h6>
+                                                <p class="mb-1">0123456789</p>
+                                                <p class="mb-0">123 Đường ABC, Phường 1, Quận 1, TP.HCM</p>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-outline-primary btn-sm me-2">Sửa</button>
+                                                <button class="btn btn-outline-danger btn-sm">Xóa</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Address 2 -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div>
+                                                <h6 class="mb-1">Nguyễn Văn A</h6>
+                                                <p class="mb-1">0123456789</p>
+                                                <p class="mb-0">456 Đường XYZ, Phường 2, Quận 2, TP.HCM</p>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-outline-primary btn-sm me-2">Sửa</button>
+                                                <button class="btn btn-outline-danger btn-sm">Xóa</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security Tab -->
+                    <div class="tab-pane fade" id="security">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4">Bảo mật tài khoản</h5>
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Mật khẩu hiện tại</label>
+                                        <input type="password" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Mật khẩu mới</label>
+                                        <input type="password" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Xác nhận mật khẩu mới</label>
+                                        <input type="password" class="form-control">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Đổi mật khẩu</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Address Modal -->
+    <div class="modal fade" id="addAddressModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Thêm địa chỉ mới</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Họ và tên</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Số điện thoại</label>
+                            <input type="tel" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Địa chỉ</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Tỉnh/Thành phố</label>
+                                <select class="form-select" required>
+                                    <option value="">Chọn tỉnh/thành phố</option>
+                                    <option value="hcm">TP.Hồ Chí Minh</option>
+                                    <option value="hn">Hà Nội</option>
+                                    <option value="dn">Đà Nẵng</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Quận/Huyện</label>
+                                <select class="form-select" required>
+                                    <option value="">Chọn quận/huyện</option>
+                                    <option value="q1">Quận 1</option>
+                                    <option value="q2">Quận 2</option>
+                                    <option value="q3">Quận 3</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label class="form-label">Phường/Xã</label>
+                                <select class="form-select" required>
+                                    <option value="">Chọn phường/xã</option>
+                                    <option value="p1">Phường 1</option>
+                                    <option value="p2">Phường 2</option>
+                                    <option value="p3">Phường 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-primary">Thêm địa chỉ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Về PhoneShop</h5>
+                    <p>Chúng tôi cung cấp các sản phẩm điện thoại chính hãng với giá tốt nhất thị trường.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="products.html" class="text-light">Sản phẩm</a></li>
+                        <li><a href="news.html" class="text-light">Tin tức</a></li>
+                        <li><a href="contact.html" class="text-light">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên hệ</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone"></i> 1900 1234</li>
+                        <li><i class="fas fa-envelope"></i> info@phoneshop.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận 1, TP.HCM</li>
+                    </ul>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 PhoneShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn btn-primary rounded-circle">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

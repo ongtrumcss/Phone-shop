@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm - PhoneShop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading"></div>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/3659/3659898.png" alt="PhoneShop Logo" height="30" class="me-2">
+                PhoneShop
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="cart.html" class="btn btn-outline-light me-2">
+                        <i class="fas fa-shopping-cart"></i> Giỏ hàng
+                    </a>
+                    <a href="account.html" class="btn btn-outline-light">
+                        <i class="fas fa-user"></i> Tài khoản
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="bg-light py-2">
+        <div class="container">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="products.html">Sản phẩm</a></li>
+                <li class="breadcrumb-item active" aria-current="page">iPhone 15 Pro Max</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Product Detail -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Product Images -->
+            <div class="col-md-6">
+                <div class="product-images">
+                    <div class="main-image mb-3">
+                        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                             class="img-fluid rounded img-loading" id="main-product-image" 
+                             alt="iPhone 15 Pro Max"
+                             onload="this.classList.add('img-loaded')">
+                    </div>
+                    <div class="thumbnail-images row">
+                        <div class="col-3">
+                            <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                                 class="img-thumbnail img-loading" alt="iPhone 15 Pro Max 1"
+                                 onload="this.classList.add('img-loaded')"
+                                 onclick="changeMainImage(this.src)">
+                        </div>
+                        <div class="col-3">
+                            <img src="https://images.unsplash.com/photo-1695048133155-9623c3678b06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80" 
+                                 class="img-thumbnail img-loading" alt="iPhone 15 Pro Max 2"
+                                 onload="this.classList.add('img-loaded')"
+                                 onclick="changeMainImage(this.src)">
+                        </div>
+                        <div class="col-3">
+                            <img src="https://images.unsplash.com/photo-1695048133168-a7f5c25bf86e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80" 
+                                 class="img-thumbnail img-loading" alt="iPhone 15 Pro Max 3"
+                                 onload="this.classList.add('img-loaded')"
+                                 onclick="changeMainImage(this.src)">
+                        </div>
+                        <div class="col-3">
+                            <img src="https://images.unsplash.com/photo-1695048133181-5634cbe0d6f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80" 
+                                 class="img-thumbnail img-loading" alt="iPhone 15 Pro Max 4"
+                                 onload="this.classList.add('img-loaded')"
+                                 onclick="changeMainImage(this.src)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="col-md-6">
+                <div class="product-info animate__animated animate__fadeInRight">
+                    <h1 class="mb-3">iPhone 15 Pro Max</h1>
+                    <p class="text-muted mb-3">SKU: IP15PM-256-BLK</p>
+                    <div class="price mb-4">
+                        <span class="h3 text-primary">32.990.000đ</span>
+                        <span class="text-decoration-line-through text-muted ms-2">34.990.000đ</span>
+                        <span class="badge bg-danger ms-2">-5%</span>
+                    </div>
+
+                    <!-- Color Options -->
+                    <div class="mb-4">
+                        <h5>Màu sắc</h5>
+                        <div class="color-options d-flex gap-2">
+                            <button class="btn btn-outline-dark active" data-color="black">
+                                <i class="fas fa-circle text-dark"></i>
+                            </button>
+                            <button class="btn btn-outline-dark" data-color="white">
+                                <i class="fas fa-circle text-white"></i>
+                            </button>
+                            <button class="btn btn-outline-dark" data-color="blue">
+                                <i class="fas fa-circle text-primary"></i>
+                            </button>
+                            <button class="btn btn-outline-dark" data-color="natural">
+                                <i class="fas fa-circle text-warning"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Storage Options -->
+                    <div class="mb-4">
+                        <h5>Bộ nhớ</h5>
+                        <div class="storage-options d-flex gap-2">
+                            <button class="btn btn-outline-primary active">256GB</button>
+                            <button class="btn btn-outline-primary">512GB</button>
+                            <button class="btn btn-outline-primary">1TB</button>
+                            <button class="btn btn-outline-primary">2TB</button>
+                        </div>
+                    </div>
+
+                    <!-- Quantity -->
+                    <div class="mb-4">
+                        <h5>Số lượng</h5>
+                        <div class="input-group" style="width: 150px;">
+                            <button class="btn btn-outline-secondary" type="button" id="decrease-quantity">-</button>
+                            <input type="number" class="form-control text-center" value="1" min="1" id="quantity">
+                            <button class="btn btn-outline-secondary" type="button" id="increase-quantity">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-primary btn-lg flex-grow-1" id="add-to-cart">
+                            <i class="fas fa-shopping-cart me-2"></i>Thêm vào giỏ hàng
+                        </button>
+                        <button class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Details Tabs -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab">Mô tả</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button" role="tab">Thông số kỹ thuật</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab">Đánh giá</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content p-4 border border-top-0" id="productTabContent">
+                    <!-- Description Tab -->
+                    <div class="tab-pane fade show active" id="description" role="tabpanel">
+                        <h4>Mô tả sản phẩm</h4>
+                        <p>iPhone 15 Pro Max là phiên bản cao cấp nhất trong dòng iPhone 15, sở hữu màn hình 6.7 inch Super Retina XDR OLED, chip A17 Pro mạnh mẽ, camera 48MP chính và thiết kế khung titan cao cấp.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Màn hình 6.7 inch Super Retina XDR OLED</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Chip A17 Pro mạnh mẽ</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Camera 48MP chính</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Khung titan cao cấp</li>
+                        </ul>
+                    </div>
+
+                    <!-- Specifications Tab -->
+                    <div class="tab-pane fade" id="specs" role="tabpanel">
+                        <h4>Thông số kỹ thuật</h4>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>Màn hình</th>
+                                    <td>6.7 inch Super Retina XDR OLED</td>
+                                </tr>
+                                <tr>
+                                    <th>Chip</th>
+                                    <td>A17 Pro</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM</th>
+                                    <td>8GB</td>
+                                </tr>
+                                <tr>
+                                    <th>Camera sau</th>
+                                    <td>48MP + 12MP + 12MP + 12MP</td>
+                                </tr>
+                                <tr>
+                                    <th>Camera trước</th>
+                                    <td>12MP</td>
+                                </tr>
+                                <tr>
+                                    <th>Pin</th>
+                                    <td>4422mAh</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Reviews Tab -->
+                    <div class="tab-pane fade" id="reviews" role="tabpanel">
+                        <h4>Đánh giá sản phẩm</h4>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="me-3">
+                                <h2 class="mb-0">4.8</h2>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="mb-0">Dựa trên 128 đánh giá</p>
+                            </div>
+                        </div>
+
+                        <!-- Review List -->
+                        <div class="review-list">
+                            <!-- Review 1 -->
+                            <div class="review-item mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h5 class="mb-1">Nguyễn Văn A</h5>
+                                        <div class="text-warning mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted">2 ngày trước</small>
+                                </div>
+                                <p class="mb-0">Sản phẩm rất tốt, đóng gói cẩn thận. Camera chụp ảnh đẹp, hiệu năng mượt mà.</p>
+                            </div>
+
+                            <!-- Review 2 -->
+                            <div class="review-item mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h5 class="mb-1">Trần Thị B</h5>
+                                        <div class="text-warning mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <small class="text-muted">1 tuần trước</small>
+                                </div>
+                                <p class="mb-0">Pin khá tốt, màn hình đẹp. Giá hơi cao nhưng xứng đáng với chất lượng.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="container py-5">
+            <h3 class="mb-4">Sản phẩm tương tự</h3>
+            <div class="row">
+                <!-- Related Product 1 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card product-card">
+                        <img src="https://images.unsplash.com/photo-1707227224354-a23fe6436ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80" 
+                             class="card-img-top img-loading" alt="Samsung Galaxy S24 Ultra"
+                             onload="this.classList.add('img-loaded')">
+                        <div class="card-body">
+                            <h5 class="card-title">Samsung Galaxy S24 Ultra</h5>
+                            <p class="card-text price-tag">29.990.000đ</p>
+                            <a href="product-detail.html" class="btn btn-primary">Chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Related Product 2 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card product-card">
+                        <img src="https://images.unsplash.com/photo-1706881155682-0c0b0b0b0b0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                             class="card-img-top img-loading" alt="Xiaomi 14 Pro"
+                             onload="this.classList.add('img-loaded')">
+                        <div class="card-body">
+                            <h5 class="card-title">Xiaomi 14 Pro</h5>
+                            <p class="card-text price-tag">19.990.000đ</p>
+                            <a href="product-detail.html" class="btn btn-primary">Chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Related Product 3 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card product-card">
+                        <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1529&q=80" 
+                             class="card-img-top img-loading" alt="OPPO Find X7 Ultra"
+                             onload="this.classList.add('img-loaded')">
+                        <div class="card-body">
+                            <h5 class="card-title">OPPO Find X7 Ultra</h5>
+                            <p class="card-text price-tag">24.990.000đ</p>
+                            <a href="product-detail.html" class="btn btn-primary">Chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Related Product 4 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card product-card">
+                        <img src="https://images.unsplash.com/photo-1678911820864-e2c567c655d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                             class="card-img-top img-loading" alt="OnePlus 12"
+                             onload="this.classList.add('img-loaded')">
+                        <div class="card-body">
+                            <h5 class="card-title">OnePlus 12</h5>
+                            <p class="card-text price-tag">21.990.000đ</p>
+                            <a href="product-detail.html" class="btn btn-primary">Chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Về PhoneShop</h5>
+                    <p>Chúng tôi cung cấp các sản phẩm điện thoại chính hãng với giá tốt nhất thị trường.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="products.html" class="text-light">Sản phẩm</a></li>
+                        <li><a href="news.html" class="text-light">Tin tức</a></li>
+                        <li><a href="contact.html" class="text-light">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên hệ</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone"></i> 1900 1234</li>
+                        <li><i class="fas fa-envelope"></i> info@phoneshop.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận 1, TP.HCM</li>
+                    </ul>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 PhoneShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn btn-primary rounded-circle">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

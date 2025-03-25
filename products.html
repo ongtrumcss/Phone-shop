@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm - PhoneShop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading"></div>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/3659/3659898.png" alt="PhoneShop Logo" height="30" class="me-2">
+                PhoneShop
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="cart.html" class="btn btn-outline-light me-2">
+                        <i class="fas fa-shopping-cart"></i> Giỏ hàng
+                    </a>
+                    <a href="account.html" class="btn btn-outline-light">
+                        <i class="fas fa-user"></i> Tài khoản
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Sidebar Filters -->
+            <div class="col-md-3">
+                <div class="card mb-4 animate__animated animate__fadeInLeft">
+                    <div class="card-body">
+                        <h5 class="card-title">Bộ lọc</h5>
+                        <div class="mb-3">
+                            <label class="form-label">Khoảng giá</label>
+                            <select class="form-select" id="price-filter">
+                                <option value="">Tất cả</option>
+                                <option value="10000000">Dưới 10 triệu</option>
+                                <option value="20000000">Dưới 20 triệu</option>
+                                <option value="30000000">Dưới 30 triệu</option>
+                                <option value="40000000">Dưới 40 triệu</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Thương hiệu</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="apple" id="brand1">
+                                <label class="form-check-label" for="brand1">Apple</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="samsung" id="brand2">
+                                <label class="form-check-label" for="brand2">Samsung</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="xiaomi" id="brand3">
+                                <label class="form-check-label" for="brand3">Xiaomi</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="oppo" id="brand4">
+                                <label class="form-check-label" for="brand4">OPPO</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">RAM</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="4" id="ram1">
+                                <label class="form-check-label" for="ram1">4GB</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="6" id="ram2">
+                                <label class="form-check-label" for="ram2">6GB</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="8" id="ram3">
+                                <label class="form-check-label" for="ram3">8GB</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="12" id="ram4">
+                                <label class="form-check-label" for="ram4">12GB</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="col-md-9">
+                <!-- Search Bar -->
+                <div class="mb-4 animate__animated animate__fadeInRight">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="search-input" placeholder="Tìm kiếm sản phẩm...">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Products -->
+                <div class="row">
+                    <!-- Product 1 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card product-card">
+                            <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                                 class="card-img-top img-loading" alt="iPhone 15 Pro Max"
+                                 onload="this.classList.add('img-loaded')">
+                            <div class="card-body">
+                                <h5 class="card-title">iPhone 15 Pro Max</h5>
+                                <p class="card-text price-tag">32.990.000đ</p>
+                                <a href="product-detail.html" class="btn btn-primary">Chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card product-card">
+                            <img src="https://images.unsplash.com/photo-1707227224354-a23fe6436ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80" 
+                                 class="card-img-top img-loading" alt="Samsung Galaxy S24 Ultra"
+                                 onload="this.classList.add('img-loaded')">
+                            <div class="card-body">
+                                <h5 class="card-title">Samsung Galaxy S24 Ultra</h5>
+                                <p class="card-text price-tag">29.990.000đ</p>
+                                <a href="product-detail.html" class="btn btn-primary">Chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card product-card">
+                            <img src="https://images.unsplash.com/photo-1706881155682-0c0b0b0b0b0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                                 class="card-img-top img-loading" alt="Xiaomi 14 Pro"
+                                 onload="this.classList.add('img-loaded')">
+                            <div class="card-body">
+                                <h5 class="card-title">Xiaomi 14 Pro</h5>
+                                <p class="card-text price-tag">19.990.000đ</p>
+                                <a href="product-detail.html" class="btn btn-primary">Chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card product-card">
+                            <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1529&q=80" 
+                                 class="card-img-top img-loading" alt="OPPO Find X7 Ultra"
+                                 onload="this.classList.add('img-loaded')">
+                            <div class="card-body">
+                                <h5 class="card-title">OPPO Find X7 Ultra</h5>
+                                <p class="card-text price-tag">24.990.000đ</p>
+                                <a href="product-detail.html" class="btn btn-primary">Chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card product-card">
+                            <img src="https://images.unsplash.com/photo-1678911820864-e2c567c655d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                                 class="card-img-top img-loading" alt="OnePlus 12"
+                                 onload="this.classList.add('img-loaded')">
+                            <div class="card-body">
+                                <h5 class="card-title">OnePlus 12</h5>
+                                <p class="card-text price-tag">32.990.000đ</p>
+                                <a href="product-detail.html" class="btn btn-primary">Chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 6 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card product-card">
+                            <img src="https://images.unsplash.com/photo-1697559439090-cb48462ec681?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                                 class="card-img-top img-loading" alt="Google Pixel 8 Pro"
+                                 onload="this.classList.add('img-loaded')">
+                            <div class="card-body">
+                                <h5 class="card-title">Google Pixel 8 Pro</h5>
+                                <p class="card-text price-tag">29.990.000đ</p>
+                                <a href="product-detail.html" class="btn btn-primary">Chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 7 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card product-card">
+                            <img src="https://images.unsplash.com/photo-1697559439174-9d7fe5790276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                                 class="card-img-top img-loading" alt="Vivo X100 Pro"
+                                 onload="this.classList.add('img-loaded')">
+                            <div class="card-body">
+                                <h5 class="card-title">Vivo X100 Pro</h5>
+                                <p class="card-text price-tag">19.990.000đ</p>
+                                <a href="product-detail.html" class="btn btn-primary">Chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 8 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card product-card">
+                            <img src="https://images.unsplash.com/photo-1697559439197-dd43eb089a11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                                 class="card-img-top img-loading" alt="HONOR Magic6 Pro"
+                                 onload="this.classList.add('img-loaded')">
+                            <div class="card-body">
+                                <h5 class="card-title">HONOR Magic6 Pro</h5>
+                                <p class="card-text price-tag">24.990.000đ</p>
+                                <a href="product-detail.html" class="btn btn-primary">Chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <nav aria-label="Page navigation" class="mt-4">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Trước</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Sau</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Về PhoneShop</h5>
+                    <p>Chúng tôi cung cấp các sản phẩm điện thoại chính hãng với giá tốt nhất thị trường.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="products.html" class="text-light">Sản phẩm</a></li>
+                        <li><a href="news.html" class="text-light">Tin tức</a></li>
+                        <li><a href="contact.html" class="text-light">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên hệ</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone"></i> 1900 1234</li>
+                        <li><i class="fas fa-envelope"></i> info@phoneshop.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận 1, TP.HCM</li>
+                    </ul>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 PhoneShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn btn-primary rounded-circle">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

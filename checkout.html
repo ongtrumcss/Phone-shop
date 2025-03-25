@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán - PhoneShop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading"></div>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/3659/3659898.png" alt="PhoneShop Logo" height="30" class="me-2">
+                PhoneShop
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="cart.html" class="btn btn-outline-light me-2">
+                        <i class="fas fa-shopping-cart"></i> Giỏ hàng
+                    </a>
+                    <a href="account.html" class="btn btn-outline-light">
+                        <i class="fas fa-user"></i> Tài khoản
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="bg-light py-2">
+        <div class="container">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="cart.html">Giỏ hàng</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Thanh toán</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Checkout Section -->
+    <div class="container py-5">
+        <h2 class="mb-4 animate__animated animate__fadeIn">Thanh toán</h2>
+        <div class="row">
+            <!-- Delivery Information -->
+            <div class="col-lg-8">
+                <div class="card mb-4 animate__animated animate__fadeInLeft">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Thông tin giao hàng</h5>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Họ và tên</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Số điện thoại</label>
+                                    <input type="tel" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Địa chỉ</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Tỉnh/Thành phố</label>
+                                    <select class="form-select" required>
+                                        <option value="">Chọn tỉnh/thành phố</option>
+                                        <option value="hcm">TP.Hồ Chí Minh</option>
+                                        <option value="hn">Hà Nội</option>
+                                        <option value="dn">Đà Nẵng</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Quận/Huyện</label>
+                                    <select class="form-select" required>
+                                        <option value="">Chọn quận/huyện</option>
+                                        <option value="q1">Quận 1</option>
+                                        <option value="q2">Quận 2</option>
+                                        <option value="q3">Quận 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Phường/Xã</label>
+                                    <select class="form-select" required>
+                                        <option value="">Chọn phường/xã</option>
+                                        <option value="p1">Phường 1</option>
+                                        <option value="p2">Phường 2</option>
+                                        <option value="p3">Phường 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Ghi chú</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="card animate__animated animate__fadeInLeft animate__delay-1s">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Phương thức thanh toán</h5>
+                        <div class="payment-methods">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="payment" id="cod" checked>
+                                <label class="form-check-label" for="cod">
+                                    <i class="fas fa-money-bill-wave me-2"></i>Thanh toán khi nhận hàng
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="payment" id="card">
+                                <label class="form-check-label" for="card">
+                                    <i class="fas fa-credit-card me-2"></i>Thẻ tín dụng/ghi nợ
+                                </label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="payment" id="bank">
+                                <label class="form-check-label" for="bank">
+                                    <i class="fas fa-university me-2"></i>Chuyển khoản ngân hàng
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="payment" id="ewallet">
+                                <label class="form-check-label" for="ewallet">
+                                    <i class="fas fa-wallet me-2"></i>Ví điện tử
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="col-lg-4">
+                <div class="card animate__animated animate__fadeInRight">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Tổng đơn hàng</h5>
+                        <!-- Order Items -->
+                        <div class="order-items mb-4">
+                            <!-- Item 1 -->
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" class="img-thumbnail me-3" style="width: 60px;" alt="iPhone 15 Pro Max">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0">iPhone 15 Pro Max</h6>
+                                    <small class="text-muted">256GB - Titanium Black</small>
+                                    <p class="mb-0 price-tag">32.990.000đ</p>
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://images.unsplash.com/photo-1706881155682-0c0b0b0b0b0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" class="img-thumbnail me-3" style="width: 60px;" alt="Samsung Galaxy S24 Ultra">
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0">Samsung Galaxy S24 Ultra</h6>
+                                    <small class="text-muted">512GB - Titanium Gray</small>
+                                    <p class="mb-0 price-tag">29.990.000đ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- Order Total -->
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Tạm tính</span>
+                            <span>62.980.000đ</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Phí vận chuyển</span>
+                            <span class="text-success">Miễn phí</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Giảm giá</span>
+                            <span class="text-danger">-1.649.500đ</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between mb-4">
+                            <span class="h5">Tổng cộng</span>
+                            <span class="h5 text-primary">61.330.500đ</span>
+                        </div>
+
+                        <!-- Security Info -->
+                        <div class="security-info mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-shield-alt text-success me-2"></i>
+                                <span>Thanh toán an toàn</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="fas fa-truck text-success me-2"></i>
+                                <span>Giao hàng nhanh chóng</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-undo text-success me-2"></i>
+                                <span>Dễ dàng đổi trả</span>
+                            </div>
+                        </div>
+
+                        <!-- Place Order Button -->
+                        <button class="btn btn-primary btn-lg w-100" id="place-order">
+                            Đặt hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Về PhoneShop</h5>
+                    <p>Chúng tôi cung cấp các sản phẩm điện thoại chính hãng với giá tốt nhất thị trường.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="products.html" class="text-light">Sản phẩm</a></li>
+                        <li><a href="news.html" class="text-light">Tin tức</a></li>
+                        <li><a href="contact.html" class="text-light">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên hệ</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone"></i> 1900 1234</li>
+                        <li><i class="fas fa-envelope"></i> info@phoneshop.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận 1, TP.HCM</li>
+                    </ul>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 PhoneShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn btn-primary rounded-circle">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

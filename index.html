@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneShop - Cửa hàng điện thoại uy tín</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading"></div>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/3659/3659898.png" alt="PhoneShop Logo" height="30" class="me-2">
+                PhoneShop
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="cart.html" class="btn btn-outline-light me-2">
+                        <i class="fas fa-shopping-cart"></i> Giỏ hàng
+                    </a>
+                    <a href="account.html" class="btn btn-outline-light">
+                        <i class="fas fa-user"></i> Tài khoản
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="animate__animated animate__fadeInLeft">Chào mừng đến với PhoneShop</h1>
+                    <p class="lead animate__animated animate__fadeInLeft animate__delay-1s">Khám phá bộ sưu tập điện thoại mới nhất với giá tốt nhất</p>
+                    <a href="products.html" class="btn btn-primary btn-lg animate__animated animate__fadeInLeft animate__delay-2s">Xem sản phẩm</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80" alt="Latest Phones" class="img-fluid animate__animated animate__fadeInRight">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Products -->
+    <div class="container py-5">
+        <h2 class="text-center mb-4 animate__animated animate__fadeIn">Sản phẩm nổi bật</h2>
+        <div class="row">
+            <!-- Product Card 1 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card animate__animated animate__fadeInUp">
+                    <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" class="card-img-top" alt="iPhone 15 Pro Max">
+                    <div class="card-body">
+                        <h5 class="card-title">iPhone 15 Pro Max</h5>
+                        <p class="card-text price-tag">32.990.000đ</p>
+                        <a href="product-detail.html" class="btn btn-primary">Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card animate__animated animate__fadeInUp animate__delay-1s">
+                    <img src="https://images.unsplash.com/photo-1706881155682-0c0b0b0b0b0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" class="card-img-top" alt="Samsung Galaxy S24 Ultra">
+                    <div class="card-body">
+                        <h5 class="card-title">Samsung Galaxy S24 Ultra</h5>
+                        <p class="card-text price-tag">29.990.000đ</p>
+                        <a href="product-detail.html" class="btn btn-primary">Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card animate__animated animate__fadeInUp animate__delay-2s">
+                    <img src="https://images.unsplash.com/photo-1706881155682-0c0b0b0b0b0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" class="card-img-top" alt="Xiaomi 14 Pro">
+                    <div class="card-body">
+                        <h5 class="card-title">Xiaomi 14 Pro</h5>
+                        <p class="card-text price-tag">19.990.000đ</p>
+                        <a href="product-detail.html" class="btn btn-primary">Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="col-md-3 mb-4">
+                <div class="card product-card animate__animated animate__fadeInUp animate__delay-3s">
+                    <img src="https://images.unsplash.com/photo-1706881155682-0c0b0b0b0b0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" class="card-img-top" alt="OPPO Find X7 Ultra">
+                    <div class="card-body">
+                        <h5 class="card-title">OPPO Find X7 Ultra</h5>
+                        <p class="card-text price-tag">24.990.000đ</p>
+                        <a href="product-detail.html" class="btn btn-primary">Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <div class="bg-light py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h3 class="mb-4 animate__animated animate__fadeIn">Đăng ký nhận tin</h3>
+                    <p class="mb-4 animate__animated animate__fadeIn animate__delay-1s">Đăng ký để nhận những thông tin mới nhất về sản phẩm và khuyến mãi</p>
+                    <form id="newsletter-form" class="animate__animated animate__fadeIn animate__delay-2s">
+                        <div class="input-group">
+                            <input type="email" class="form-control" id="newsletter-email" placeholder="Nhập email của bạn" required>
+                            <button class="btn btn-primary" type="submit">Đăng ký</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Về PhoneShop</h5>
+                    <p>Chúng tôi cung cấp các sản phẩm điện thoại chính hãng với giá tốt nhất thị trường.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="products.html" class="text-light">Sản phẩm</a></li>
+                        <li><a href="news.html" class="text-light">Tin tức</a></li>
+                        <li><a href="contact.html" class="text-light">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên hệ</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone"></i> 1900 1234</li>
+                        <li><i class="fas fa-envelope"></i> info@phoneshop.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận 1, TP.HCM</li>
+                    </ul>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 PhoneShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn btn-primary rounded-circle">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html> 
